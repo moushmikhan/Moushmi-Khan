@@ -1,11 +1,9 @@
 package com.N26.api.utilities;
 
 import com.N26.api.cons.ApiMethods;
-import com.morningstar.automation.base.core.utils.Logger;
 import io.restassured.RestAssured;
-import io.restassured.authentication.PreemptiveBasicAuthScheme;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.Headers;
+
 import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
 import io.restassured.specification.RequestSpecification;
@@ -80,17 +78,7 @@ public class RequestBuilderUtil {
 		return executeAPI();
 	}
 	
-	
-	public ResponseOptions<Response> ExecuteWithPathParam(Map<String, String> pathParams) {
-		builder.addParams(pathParams);
-		return executeAPI();
-	}
-	
-	
-	public ResponseOptions<Response> ExecuteWithBody(Map<String, String> body) {
-		builder.setBody(body);
-		return executeAPI();
-	}
+
 	
 	
 	public ResponseOptions<Response> ExecuteWithBody(String body) {
@@ -99,31 +87,7 @@ public class RequestBuilderUtil {
 	}
 
 
-	public ResponseOptions<Response> ExecuteWithQueryParamAndBody(Map<String, String> queryParams,Map<String, String> body) {
-		builder.setBody(body);
-		builder.addQueryParams(queryParams);
-		return executeAPI();
-	}
 
-
-	public ResponseOptions<Response> ExecuteWithQueryParamAndBody(Map<String, String> queryParams, String body) {
-		builder.setBody(body);
-		builder.addQueryParams(queryParams);
-		return executeAPI();
-	}
-	
-
-	public RequestSpecBuilder getRequestBuilder() {
-		return builder;
-	}
-	
-	public ResponseOptions<Response> ExecuteWithBasicAuthentication(String username, String password) {
-		PreemptiveBasicAuthScheme auth = new PreemptiveBasicAuthScheme();
-		auth.setUserName(username);
-		auth.setPassword(password);
-		builder.setAuth(auth);
-		return executeAPI();
-	}
 
 
 }
