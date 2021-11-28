@@ -12,6 +12,7 @@ Steps to Run the project
 - Set up the  Swagger Petstore API playground and run it locally to ensure data is present on the local server https://github.com/swagger-api/swagger-petstore
 - Clone the repository https://github.com/moushmikhan/Moushmi-Khan.git
 - Add restAssured-api as a Maven project
+- Setup the SDK
 - Run APIv3.xml File
 
 ***All the lib/dependencies required will be automatically downloaded once the project is added as maven project***
