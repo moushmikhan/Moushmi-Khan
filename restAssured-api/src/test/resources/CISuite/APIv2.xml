@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RPS_APIV3" >
+    <groups>
+        <run>
+            <include name="APIv3"/>
+        </run>
+    </groups>
+    <test name="APIv3_TESTS">
+
+        <classes>
+
+            <class name="com.Test.api.test.APIv2Tests.Get_Direction"/>
+            <class name="com.Test.api.test.APIv2Tests.Post_Direction"/>
+            <class name="com.Test.api.test.APIv2Tests.Post_Elevation"/>
+            <class name="com.Test.api.test.APIv2Tests.DeleteDirection"/>
+            <class name="com.Test.api.test.APIv2Tests.Get_Elevation"/>
+
+        </classes>
+    </test>
+
+</suite>
