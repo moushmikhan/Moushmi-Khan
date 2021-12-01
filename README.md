@@ -11,6 +11,6 @@ Steps to Run the project
 - Clone the repository https://github.com/moushmikhan/Moushmi-Khan_API.git
 - Add restAssured-api as a Maven project
 - Setup the SDK
-- Run APIv3.xml File
+- Run APIv2.xml File
 
 ***All the lib/dependencies required will be automatically downloaded once the project is added as maven project***
